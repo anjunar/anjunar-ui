@@ -8,8 +8,9 @@ CSS-first design foundation for Anjunar projects.
 
 - `theme.css` defines the Tailwind theme and runtime CSS variables.
 - `base.css` defines global document defaults.
+- `utilities.css` defines low-level reusable visual utilities.
 - `components.css` defines generic `aj-*` primitives.
-- `index.css` imports Tailwind and all Anjunar UI layers.
+- `index.css` imports all Anjunar UI layers.
 
 ## Usage
 
@@ -29,6 +30,34 @@ or:
 ```html
 <html data-theme="dark">
 ```
+
+## Language
+
+Use Tailwind for composition and `aj-*` classes for repeated Anjunar primitives:
+
+```html
+<section class="aj-card-glass aj-stack">
+  <p class="aj-label">Context</p>
+  <h1 class="aj-heading">A clear surface</h1>
+  <p class="aj-copy">Project-specific layout can stay local while shared structure remains reusable.</p>
+</section>
+```
+
+Core primitives:
+
+- `aj-glass`, `aj-glass-soft`, `aj-glass-dense`, `aj-card-glass`
+- `aj-card`, `aj-card-quiet`, `aj-panel`, `aj-panel-muted`
+- `aj-toolbar`, `aj-floating`, `aj-menu`, `aj-menu-item`
+- `aj-tabs`, `aj-tab`, `aj-tab-active`
+- `aj-button`, `aj-button-primary`, `aj-button-quiet`, `aj-button-ghost`
+- `aj-input`, `aj-chip`, `aj-badge`, `aj-empty`, `aj-table-shell`
+
+Shared recipe tokens:
+
+- `--aj-floating-*` for menus, popovers, dropdowns, and small detached controls.
+- `--aj-overlay-*` for larger elevated surfaces, notifications, dialogs, and transient panels.
+- `--aj-chrome-*` for bars, headers, footers, and application frame seams.
+- `--aj-control-*` for compact interactive controls and active/hover states.
 
 ## Boundary
 

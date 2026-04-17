@@ -8,12 +8,14 @@
     ".": "./index.css",
     "./theme": "./theme.css",
     "./base": "./base.css",
+    "./utilities": "./utilities.css",
     "./components": "./components.css"
   },
   "files": [
     "index.css",
     "theme.css",
     "base.css",
+    "utilities.css",
     "components.css",
     "README.md"
   ],

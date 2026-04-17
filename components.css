@@ -23,6 +23,49 @@
     @apply rounded-panel border border-line bg-surface p-6 shadow-panel;
   }
 
+  .aj-card {
+    @apply rounded-panel border border-line bg-surface p-5 shadow-panel;
+  }
+
+  .aj-card-quiet {
+    @apply rounded-panel border border-line-soft bg-surface-muted p-5;
+  }
+
+  .aj-card-glass {
+    background: var(--aj-glass-bg-soft);
+    border: 1px solid var(--aj-glass-border);
+    border-radius: var(--aj-radius-panel);
+    box-shadow: 0 10px 28px var(--aj-glass-shadow);
+    padding: 14px;
+    margin: 10px 12px;
+    backdrop-filter: blur(calc(var(--aj-glass-blur) - 2px)) saturate(180%);
+    -webkit-backdrop-filter: blur(calc(var(--aj-glass-blur) - 2px)) saturate(180%);
+  }
+
+  .aj-glass {
+    background: var(--aj-glass-bg-medium);
+    border: 1px solid var(--aj-glass-border);
+    box-shadow: 0 10px 32px var(--aj-glass-shadow);
+    backdrop-filter: blur(var(--aj-glass-blur)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--aj-glass-blur)) saturate(180%);
+  }
+
+  .aj-glass-soft {
+    background: var(--aj-glass-bg-soft);
+    border: 1px solid color-mix(in srgb, var(--aj-glass-border) 72%, transparent);
+    box-shadow: 0 8px 22px color-mix(in srgb, var(--aj-glass-shadow) 72%, transparent);
+    backdrop-filter: blur(calc(var(--aj-glass-blur) - 6px)) saturate(180%);
+    -webkit-backdrop-filter: blur(calc(var(--aj-glass-blur) - 6px)) saturate(180%);
+  }
+
+  .aj-glass-dense {
+    background: var(--aj-glass-bg-dense);
+    border: 1px solid var(--aj-glass-border);
+    box-shadow: 0 16px 40px var(--aj-glass-shadow);
+    backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
+    -webkit-backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
+  }
+
   .aj-panel-muted {
     @apply rounded-panel border border-line-soft bg-surface-muted p-6;
   }
@@ -83,7 +126,100 @@
     @apply inline-flex items-center rounded-full border border-line bg-surface-muted px-2.5 py-1 text-xs font-medium text-ink-soft;
   }
 
+  .aj-chip {
+    @apply inline-flex min-h-8 items-center gap-2 rounded-full border border-line bg-surface-muted px-3 text-xs font-semibold text-ink-soft;
+  }
+
   .aj-link {
     @apply text-accent-strong underline-offset-4 hover:underline;
+  }
+
+  .aj-toolbar {
+    @apply flex min-w-0 items-center gap-2 px-3 py-2;
+    background: var(--aj-floating-bg);
+    border: 1px solid var(--aj-floating-border);
+    border-radius: var(--aj-radius-panel);
+    box-shadow: var(--aj-shadow-panel);
+  }
+
+  .aj-floating {
+    background: var(--aj-floating-bg);
+    border: 1px solid var(--aj-floating-border);
+    border-radius: var(--aj-floating-radius);
+    box-shadow: var(--aj-floating-shadow);
+  }
+
+  .aj-menu {
+    @apply min-w-44 p-1;
+    background: var(--aj-floating-bg);
+    border: 1px solid var(--aj-floating-border);
+    border-radius: var(--aj-floating-radius);
+    box-shadow: var(--aj-floating-shadow);
+  }
+
+  .aj-menu-item {
+    @apply flex min-h-8 cursor-pointer items-center px-3 text-sm;
+    color: var(--aj-control-ink);
+    border-radius: calc(var(--aj-radius-control) - 4px);
+  }
+
+  .aj-menu-item:hover {
+    background: var(--aj-control-bg-hover);
+    color: var(--aj-control-ink-hover);
+  }
+
+  .aj-tabs {
+    @apply flex min-w-0 items-center gap-1 border-b border-line-soft bg-surface-muted px-2 pt-2;
+  }
+
+  .aj-tab {
+    @apply min-h-9 border border-transparent px-3 text-sm font-semibold text-ink-muted hover:bg-surface-raised hover:text-ink;
+    border-radius: var(--aj-radius-control) var(--aj-radius-control) 0 0;
+  }
+
+  .aj-tab-active {
+    @apply border-line bg-surface text-ink;
+  }
+
+  .aj-chrome-top {
+    background: var(--aj-gradient-chrome-top);
+    border-bottom: 1px solid var(--aj-line-strong);
+    box-shadow: inset 0 -1px 0 var(--aj-line-soft);
+  }
+
+  .aj-chrome-bottom {
+    background: var(--aj-gradient-chrome-bottom);
+    border-top: 1px solid var(--aj-line-strong);
+    box-shadow: inset 0 1px 0 var(--aj-line-soft);
+  }
+
+  .aj-icon-tile {
+    @apply inline-flex items-center justify-center rounded-control bg-surface-muted text-ink-soft;
+    box-shadow: inset 0 1px 0 var(--aj-line-soft);
+  }
+
+  .aj-empty {
+    @apply flex min-h-32 flex-col items-center justify-center rounded-panel border border-line-soft bg-surface-muted p-6 text-center text-sm text-ink-muted;
+  }
+
+  .aj-table-shell {
+    @apply overflow-hidden rounded-panel border border-line bg-surface shadow-panel;
+  }
+
+  .aj-editor-surface {
+    @apply rounded-panel border border-line bg-surface text-ink;
+  }
+
+  @media (max-width: 767px) {
+    .aj-glass,
+    .aj-card-glass,
+    .aj-glass-soft,
+    .aj-glass-dense {
+      background: var(--aj-glass-bg-mobile);
+      border-color: var(--aj-glass-border-mobile);
+      box-shadow: 0 18px 40px var(--aj-glass-shadow-mobile), inset 0 1px 0 color-mix(in srgb, white 8%, transparent);
+      backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
+      -webkit-backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
+    }
   }
 }
