@@ -210,6 +210,98 @@
     @apply rounded-panel border border-line bg-surface text-ink;
   }
 
+  .aj-page {
+    @apply min-h-full w-full overflow-x-hidden overflow-y-visible text-ink;
+  }
+
+  .aj-page-layout {
+    @apply box-border flex flex-col gap-6 px-10 py-8;
+  }
+
+  .aj-page-shell {
+    @apply relative z-10 box-border;
+  }
+
+  .aj-page-hero {
+    @apply relative overflow-hidden rounded-[28px] border border-line-soft bg-surface-overlay shadow-panel;
+  }
+
+  .aj-page-panel {
+    @apply rounded-[24px] border border-line-soft bg-surface-overlay shadow-panel;
+  }
+
+  .aj-page-panel-shell {
+    @apply relative z-10 box-border p-6;
+  }
+
+  .aj-kicker {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-ink-muted;
+  }
+
+  .aj-page-title {
+    @apply text-ink;
+  }
+
+  .aj-page-copy {
+    @apply text-sm leading-7 text-ink-soft;
+  }
+
+  .aj-icon-badge {
+    @apply inline-flex items-center justify-center rounded-full border border-line-soft bg-surface-muted text-ink-soft;
+    box-shadow: inset 0 1px 0 var(--aj-line-soft);
+  }
+
+  .aj-action-pill {
+    @apply inline-flex min-h-11 items-center justify-center rounded-full border border-line-soft px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft transition;
+    background: color-mix(in srgb, var(--aj-surface-overlay) 82%, transparent);
+    box-shadow:
+      inset 0 1px 0 color-mix(in srgb, white 6%, transparent),
+      0 10px 28px color-mix(in srgb, var(--aj-shadow-medium) 12%, transparent);
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+  }
+
+  .aj-action-pill:hover {
+    background: var(--aj-surface-hover);
+    border-color: var(--aj-line-strong);
+  }
+
+  .aj-action-pill-primary {
+    border-color: color-mix(in srgb, var(--aj-accent) 24%, white 10%);
+    background: color-mix(in srgb, var(--aj-accent-muted) 72%, transparent);
+  }
+
+  .aj-action-pill-ghost {
+    opacity: 0.88;
+  }
+
+  .aj-quick-row {
+    @apply flex w-full items-center gap-4 rounded-[18px] border border-line-soft bg-surface-muted px-4 py-3 transition;
+    box-shadow: inset 0 1px 0 color-mix(in srgb, white 4%, transparent);
+  }
+
+  .aj-quick-row:hover {
+    border-color: color-mix(in srgb, var(--aj-accent) 22%, white 8%);
+    background: color-mix(in srgb, var(--aj-accent-muted) 48%, transparent);
+  }
+
+  .aj-quick-icon {
+    @apply inline-flex items-center justify-center rounded-full border border-line-soft text-ink-soft;
+    box-shadow: inset 0 1px 0 var(--aj-line-soft);
+  }
+
+  .aj-quick-copy {
+    @apply flex min-w-0 flex-col gap-1;
+  }
+
+  .aj-quick-title {
+    @apply text-sm font-semibold tracking-tight text-ink;
+  }
+
+  .aj-quick-text {
+    @apply text-sm leading-6 text-ink-soft;
+  }
+
   @media (max-width: 767px) {
     .aj-glass,
     .aj-card-glass,
@@ -220,6 +312,22 @@
       box-shadow: 0 18px 40px var(--aj-glass-shadow-mobile), inset 0 1px 0 color-mix(in srgb, white 8%, transparent);
       backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
       -webkit-backdrop-filter: blur(calc(var(--aj-glass-blur) + 2px)) saturate(180%);
+    }
+
+    .aj-page-layout {
+      @apply gap-4 px-4 py-4;
+    }
+
+    .aj-page-hero {
+      @apply rounded-[20px];
+    }
+
+    .aj-page-panel {
+      @apply rounded-[20px];
+    }
+
+    .aj-page-panel-shell {
+      @apply p-4;
     }
   }
 }

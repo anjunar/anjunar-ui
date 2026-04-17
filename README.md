@@ -52,6 +52,14 @@ Core primitives:
 - `aj-button`, `aj-button-primary`, `aj-button-quiet`, `aj-button-ghost`
 - `aj-input`, `aj-chip`, `aj-badge`, `aj-empty`, `aj-table-shell`
 
+Page primitives:
+
+- `aj-page`, `aj-page-layout`, `aj-page-shell`
+- `aj-page-hero`, `aj-page-panel`, `aj-page-panel-shell`
+- `aj-kicker`, `aj-page-title`, `aj-page-copy`
+- `aj-action-pill`, `aj-action-pill-primary`, `aj-action-pill-ghost`
+- `aj-icon-badge`, `aj-quick-row`, `aj-quick-icon`, `aj-quick-copy`
+
 Shared recipe tokens:
 
 - `--aj-floating-*` for menus, popovers, dropdowns, and small detached controls.
