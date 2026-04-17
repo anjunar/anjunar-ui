@@ -1,0 +1,31 @@
+@layer base {
+  html {
+    background: var(--aj-canvas);
+    color: var(--aj-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: var(--aj-accent-muted);
+    color: var(--aj-ink);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--aj-shadow-focus);
+  }
+}

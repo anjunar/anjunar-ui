@@ -1,0 +1,89 @@
+@layer components {
+  .aj-app {
+    @apply min-h-screen bg-canvas text-ink;
+  }
+
+  .aj-shell {
+    @apply mx-auto flex w-full max-w-7xl flex-col gap-shell px-6 py-8;
+  }
+
+  .aj-stack {
+    @apply flex flex-col gap-section;
+  }
+
+  .aj-row {
+    @apply flex min-w-0 items-center gap-field;
+  }
+
+  .aj-cluster {
+    @apply flex flex-wrap items-center gap-field;
+  }
+
+  .aj-panel {
+    @apply rounded-panel border border-line bg-surface p-6 shadow-panel;
+  }
+
+  .aj-panel-muted {
+    @apply rounded-panel border border-line-soft bg-surface-muted p-6;
+  }
+
+  .aj-surface {
+    @apply rounded-panel border border-line bg-surface;
+  }
+
+  .aj-label {
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted;
+  }
+
+  .aj-heading {
+    @apply font-serif text-3xl font-normal tracking-tight text-ink;
+  }
+
+  .aj-title {
+    @apply text-lg font-semibold tracking-tight text-ink;
+  }
+
+  .aj-copy {
+    @apply text-sm leading-7 text-ink-soft;
+  }
+
+  .aj-muted {
+    @apply text-sm text-ink-muted;
+  }
+
+  .aj-button {
+    @apply inline-flex min-h-10 items-center justify-center rounded-control px-4 py-2 text-sm font-medium transition;
+  }
+
+  .aj-button-primary {
+    @apply bg-accent text-ink-inverse hover:bg-accent-strong;
+  }
+
+  .aj-button-quiet {
+    @apply border border-line bg-surface text-ink hover:bg-surface-muted;
+  }
+
+  .aj-button-ghost {
+    @apply text-ink-soft hover:bg-surface-muted hover:text-ink;
+  }
+
+  .aj-input {
+    @apply min-h-10 w-full rounded-control border border-line bg-surface px-3 py-2 text-sm text-ink transition placeholder:text-ink-faint;
+  }
+
+  .aj-input:focus {
+    @apply border-accent;
+  }
+
+  .aj-divider {
+    @apply border-0 border-t border-line-soft;
+  }
+
+  .aj-badge {
+    @apply inline-flex items-center rounded-full border border-line bg-surface-muted px-2.5 py-1 text-xs font-medium text-ink-soft;
+  }
+
+  .aj-link {
+    @apply text-accent-strong underline-offset-4 hover:underline;
+  }
+}
